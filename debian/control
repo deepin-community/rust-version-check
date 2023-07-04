@@ -1,15 +1,33 @@
-Source: template-repository
-Section: unknown
+Source: rust-version-check
+Section: rust
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Build-Depends: debhelper (>= 12),
+ dh-cargo (>= 25),
+ cargo:native <!nocheck>,
+ rustc:native <!nocheck>,
+ libstd-rust-dev <!nocheck>
+Maintainer: Debian Rust Maintainers <pkg-rust-maintainers@alioth-lists.debian.net>
+Uploaders:
+ Sylvestre Ledru <sylvestre@debian.org>
+Standards-Version: 4.5.1
+Vcs-Git: https://salsa.debian.org/rust-team/debcargo-conf.git [src/version-check]
+Vcs-Browser: https://salsa.debian.org/rust-team/debcargo-conf/tree/master/src/version-check
+X-Cargo-Crate: version_check
+Rules-Requires-Root: no
 
-Package: template-repository
+Package: librust-version-check-dev
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Multi-Arch: same
+Depends:
+ ${misc:Depends}
+Provides:
+ librust-version-check+default-dev (= ${binary:Version}),
+ librust-version-check-0-dev (= ${binary:Version}),
+ librust-version-check-0+default-dev (= ${binary:Version}),
+ librust-version-check-0.9-dev (= ${binary:Version}),
+ librust-version-check-0.9+default-dev (= ${binary:Version}),
+ librust-version-check-0.9.4-dev (= ${binary:Version}),
+ librust-version-check-0.9.4+default-dev (= ${binary:Version})
+Description: Tiny crate to check the version of the installed/running rustc - Rust source code
+ This package contains the source for the Rust version_check crate, packaged by
+ debcargo for use with cargo and dh-cargo.
