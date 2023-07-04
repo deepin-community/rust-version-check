@@ -4,12 +4,25 @@ Upstream-Contact: Sergio Benitez <sb@sergio.bz>
 Source: https://github.com/SergioBenitez/version_check
 
 Files: *
-Copyright: 2017-2021 Sergio Benitez <sb@sergio.bz>
+Copyright: FIXME (overlay) UNKNOWN-YEARS Sergio Benitez <sb@sergio.bz>
 License: MIT or Apache-2.0
+Comment:
+ FIXME (overlay): Since upstream copyright years are not available in
+ Cargo.toml, they were extracted from the upstream Git repository. This may not
+ be correct information so you should review and fix this before uploading to
+ the archive.
+
+Files: ./LICENSE-MIT
+Copyright: 2017-2018 Sergio Benitez
+License: UNKNOWN-LICENSE; FIXME (overlay)
+Comment:
+ FIXME (overlay): These notices are extracted from files. Please review them
+ before uploading to the archive.
 
 Files: debian/*
-Copyright: 2018-2022 Debian Rust Maintainers <pkg-rust-maintainers@alioth-lists.debian.net>
-           2018 Sylvestre Ledru <sylvestre@debian.org>
+Copyright:
+ 2018-2022 Debian Rust Maintainers <pkg-rust-maintainers@alioth-lists.debian.net>
+ 2018-2022 Sylvestre Ledru <sylvestre@debian.org>
 License: MIT or Apache-2.0
 
 License: Apache-2.0
